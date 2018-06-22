@@ -4,3 +4,6 @@ name="termdiff"
 version=$(git --git-dir=./upstream/.git describe --abbrev=0)
 
 tar czf "${name}_${version}.orig.tar.gz" "./upstream"
+
+mkdir "${name}-${version}"
+cp -a "./upstream/." "${name}-${version}/"
