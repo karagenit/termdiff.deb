@@ -11,16 +11,13 @@ debversion="1"
 # Creates Source Tarball
 tar czf "${name}_${version}.orig.tar.gz" "./upstream"
 
-# Creates Source Directory, adds Files
+# Creates Source Directory, adds Source Files
 mkdir "${name}-${version}"
 cp -a "./upstream/." "${name}-${version}/"
 
 # Setup Source Directory for Packaging
-cd "${name}-${version}"
-mkdir "debian"
+cp "./debian" "${name}-${version}/debian"
 
 # TODO: use github changelog generator
-dch --create -v "${version}-${debversion}" --package "$name"
-echo -n "10" >> "./debian/compat"
-cp "../info.txt" "./debian/control"
-mv "LICENSE" "./debian/copyright"
+#dch --create -v "${version}-${debversion}" --package "$name"
+# Only necessary to rebuild, we can just edit manually
