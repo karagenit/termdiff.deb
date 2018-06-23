@@ -1,0 +1,11 @@
+Source: termdiff
+Maintainer: Caleb Smith <calebsmith1440@outlook.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9)
+
+Package: termdiff
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: diff terminal output of commands at different times.
