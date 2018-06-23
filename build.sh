@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Clean up from previous builds
+rm -rf termdiff*
+
 name="termdiff"
 version=$(git --git-dir=./upstream/.git describe --abbrev=0)
 # Remove leading "v" character, TODO: fix in termdiff tags?
