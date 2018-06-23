@@ -21,3 +21,6 @@ cp -r "./debian" "${name}-${version}/debian"
 # TODO: use github changelog generator
 #dch --create -v "${version}-${debversion}" --package "$name"
 # Only necessary to rebuild, we can just edit manually
+
+cd "${name}-${version}"
+debuild -us -uc
