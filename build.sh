@@ -16,7 +16,7 @@ mkdir "${name}-${version}"
 cp -a "./upstream/." "${name}-${version}/"
 
 # Setup Source Directory for Packaging
-cp "./debian" "${name}-${version}/debian"
+cp -r "./debian" "${name}-${version}/debian"
 
 # TODO: use github changelog generator
 #dch --create -v "${version}-${debversion}" --package "$name"
