@@ -9,4 +9,4 @@ Package: termdiff
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: diff command outputs
-  diff terminal outputs of commands at different times
+ diff terminal outputs of commands at different times
